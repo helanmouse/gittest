@@ -88,8 +88,6 @@ static int freeswitch_kill_background()
 	char path[256] = "";		/* full path of the PID file */
 	pid_t pid = 0;				/* pid from the pid file */
 
-	/* set the globals so we can use the global paths. */
-	switch_core_set_globals();
 
 	/* get the full path of the pid file. */
 	switch_snprintf(path, sizeof(path), "%s%s%s", SWITCH_GLOBAL_dirs.run_dir, SWITCH_PATH_SEPARATOR, pfile);
