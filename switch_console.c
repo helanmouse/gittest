@@ -96,11 +96,6 @@ static switch_status_t console_xml_config(void)
 		console_fnkeys[i] = NULL;
 	}
 
-	if (!(xml = switch_xml_open_cfg(cf, &cfg, NULL))) {
-		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_ERROR, "Open of %s failed\n", cf);
-		return SWITCH_STATUS_TERM;
-	}
-
 	if ((settings = switch_xml_child(cfg, "cli-keybindings"))) {
 		for (param = switch_xml_child(settings, "key"); param; param = param->next) {
 			char *var = (char *) switch_xml_attr_soft(param, "name");
