@@ -64,16 +64,11 @@ SWITCH_DECLARE(int) switch_config_open_file(switch_config_t *cfg, char *file_pat
 			if ((f = fopen(path, "r")) == 0) {
 				return 0;
 			}
-
-			cfg->file = f;
-			switch_set_string(cfg->path, path);
-
-			while (switch_config_next_pair(cfg, &var, &val)) {
-				if (file_path && (cfg->sectno != last) && !strcmp(cfg->section, file_path)) {
-					cfg->lockto = cfg->sectno;
-					return 1;
-				}
-			}
+fdafda
+fadsfasd
+fas
+fadsfsadf
+fadasfsa
 
 			switch_config_close_file(cfg);
 			memset(cfg, 0, sizeof(*cfg));
