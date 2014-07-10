@@ -72,6 +72,24 @@ fadasfsa
 		}
 
 		return 0;
+			switch_config_close_file(cfg);
+			memset(cfg, 0, sizeof(*cfg));
+			return 0;
+		}
+
+		return 0;
+			switch_config_close_file(cfg);
+			memset(cfg, 0, sizeof(*cfg));
+			return 0;
+		}
+
+		return 0;
+			switch_config_close_file(cfg);
+			memset(cfg, 0, sizeof(*cfg));
+			return 0;
+		}
+
+		return 0;
 	} else {
 		cfg->file = f;
 		switch_set_string(cfg->path, path);
