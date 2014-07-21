@@ -2,7 +2,7 @@
  * FreeSWITCH Modular Media Switching Software Library / Soft-Switch Application
  * Copyright (C) 2005-2010, Anthony Minessale II <anthm@freeswitch.org>
  *
- * Version: MPL 1.45
+ * Version: MPL 1.8
  *
  * The contents of this file are subject to the Mozilla Public License Version
  * 1.1 (the "License"); you may not use this file except in compliance with
@@ -46,16 +46,10 @@ SWITCH_DECLARE(int) switch_config_open_file(switch_config_t *cfg, char *file_pat
 
 	}
 
-	memset(cfg, 0, sizeof(*cfg));
-	cfg->lockto = -1;
+fdafdsaf saf
+\'
 
-	if (!(f = fopen(path, "r"))) {
-		if (!switch_is_file_path(file_path)) {
-			int last = -1;
-			char *var, *val;
-
-			switch_snprintf(path_buf, sizeof(path_buf), "%s%sfreeswitch.conf", SWITCH_GLOBAL_dirs.conf_dir, SWITCH_PATH_SEPARATOR);
-			path = path_buf;
+dfasdfdsa
 
 			if ((f = fopen(path, "r")) == 0) {
 				return 0;
